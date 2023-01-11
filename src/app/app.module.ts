@@ -7,6 +7,8 @@ import { LoginComponent } from './myCom/login/login.component';
 import { HomeComponent } from './myCom/home/home.component';
 import { TimelineComponent } from './myCom/timeline/timeline.component';
 import { ProfileComponent } from './myCom/profile/profile.component';
+import { HeaderComponent } from './myCom/header/header.component';
+import { FooterComponent } from './myCom/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ProfileComponent } from './myCom/profile/profile.component';
     LoginComponent,
     HomeComponent,
     TimelineComponent,
-    ProfileComponent
+    ProfileComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
