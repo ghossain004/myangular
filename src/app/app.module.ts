@@ -9,6 +9,7 @@ import { TimelineComponent } from './myCom/timeline/timeline.component';
 import { ProfileComponent } from './myCom/profile/profile.component';
 import { HeaderComponent } from './myCom/header/header.component';
 import { FooterComponent } from './myCom/footer/footer.component';
+import { RegisterComponent } from './myCom/register/register.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from './myCom/footer/footer.component';
     TimelineComponent,
     ProfileComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
