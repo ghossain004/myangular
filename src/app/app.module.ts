@@ -12,6 +12,18 @@ import { FooterComponent } from './myCom/footer/footer.component';
 import { RegisterComponent } from './myCom/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FriendsComponent } from './myCom/friends/friends.component';
+import { MemoriesComponent } from './myCom/memories/memories.component';
+import { MostrecentComponent } from './myCom/mostrecent/mostrecent.component';
+import { MarketplaceComponent } from './myCom/marketplace/marketplace.component';
+import { WatchComponent } from './myCom/watch/watch.component';
+import { SavedComponent } from './myCom/saved/saved.component';
+import { PagesComponent } from './myCom/pages/pages.component';
+import { EventComponent } from './myCom/event/event.component';
+import { FavoriteComponent } from './myCom/favorite/favorite.component';
+import { MessageComponent } from './myCom/message/message.component';
+import { NotificationComponent } from './myCom/notification/notification.component';
+import { GroupsComponent } from './myCom/groups/groups.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +34,19 @@ import { HttpClientModule } from '@angular/common/http';
     ProfileComponent,
     HeaderComponent,
     FooterComponent,
-    RegisterComponent
+    RegisterComponent,
+    FriendsComponent,
+    MemoriesComponent,
+    MostrecentComponent,
+    MarketplaceComponent,
+    WatchComponent,
+    SavedComponent,
+    PagesComponent,
+    EventComponent,
+    FavoriteComponent,
+    MessageComponent,
+    NotificationComponent,
+    GroupsComponent
   ],
   imports: [
     BrowserModule,
