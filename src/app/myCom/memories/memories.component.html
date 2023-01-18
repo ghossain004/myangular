@@ -1,1 +1,96 @@
-<p>memories works!</p>
+<div class="container-fluid">
+    <!-- home header -->
+    <div>        
+        <div class="toolbar" role="banner" style="position: fixed;">
+          <img width="50px" height="50px" alt="fb_icon" src="../../../assets/images/fb_icon.png"
+          />
+          <span><a routerLink="../home" style="text-decoration: none; color: white;"><h3>facebook</h3></a></span>
+          <span style="padding-left: 10px;"><input style="font-size: 15px; padding: 14px 16px; width: 200px; border-radius: 5px; border: transparent" type="text" placeholder="search people, page, group" aria-label="search people, page, group"></span>
+            <div class="spacer"></div>
+            <button class="btn btn-transparent" routerLink="../home"><i class="fa fa-home"><b> Home</b></i></button>
+            <button class="btn btn-transparent"><i class="fa fa-play"><b> Watch</b></i></button>
+            <button class="btn btn-transparent"><i class="fa fa-shopping-basket"><b> Marketplace</b></i></button>
+            <button class="btn btn-transparent"><i class="fa fa-users"><b> Group</b></i></button>
+            <button class="btn btn-transparent"><i class="fa fa-gamepad"><b> Games</b></i></button>
+      
+            <div class="spacer"></div>
+            <button class="btn btn-transparent"><i class="fa fa-bars"><b> Menu</b></i></button>
+            <button class="btn btn-transparent" routerLink="../message"><i class="fa fa-comment"><b> Message</b></i></button>
+            <button class="btn btn-transparent" routerLink="../notification"><i class="fa fa-bell"><b> Notification</b></i></button>
+            <button class="btn btn-transparent"><i class="fa fa-cog"><b> Account</b></i></button>
+        </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="row">
+        <div class="col-md-3">
+            <div style="margin-top: 70px; padding: 20px; padding-top: 0px; position: fixed; overflow:scroll; height:500px; width: 400px;">
+                <div style=" background-color: white; margin: 5px;">
+                    <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: transparent; text-align: left;" routerLink="../timeline"><b>Timeline</b></button><br>
+                    <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../friends"><b>Friends</b></button><br>
+                    <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../memories"><b>Memories</b></button><br>
+                    <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../groups"><b>Groups</b></button><br>
+                    <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../mostrecent"><b>Most Recent</b></button><br>
+                    <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../marketplace"><b>Marketplace</b></button><br>
+                    <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../watch"><b>Watch</b></button><br>
+                    <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../saved"><b>Saved</b></button><br>
+                    <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../pages"><b>Pages</b></button><br>
+                    <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../events"><b>Events</b></button><br>
+                    <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../favorite"><b>Favorite</b></button><br>
+                    <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;"><b>See More</b></button>
+                </div>
+            </div>
+        </div>
+      
+        <div class="col-md-6">
+          <div style="margin-top: 100px;">
+              <img src="../../../assets/images/memories.png" alt="fb_memories">
+              <p style="font-size: 25px; text-align: center;">
+                We hope you enjoy looking back and sharing your memories on Facebook, from the most recent to those long ago.
+              </p>
+          </div>
+          <hr>
+          <div>
+            <h6>On This Day</h6>
+            <img src="../../../assets/images/cover_photo.jpg" alt="" width="50%" height="50%" style="padding-right: 10px;">
+            <img src="../../../assets/images/profile_photo.jfif" alt="" width="50%" height="350px">
+          </div>
+        </div>
+      
+        <!-- <div class="col-md-3">
+            <div style="padding: 20px; margin: 5px; margin-top: 60px;">
+                <div style="overflow:scroll; height: 500px; position: fixed;">
+                    <div style="background-color: white; padding: 12px;">
+                        <span style="margin-right: 20px; font-size: 25px;"><b>Friend Requests</b></span>
+                        <a href="" style="font-size: 20px;">See All</a>
+                        <h6>Abu Yusuf Maruf</h6>
+                        <button class="btn btn-primary m-3">Confirm</button>
+                        <button class="btn btn-dark">Delete</button>
+                    </div>
+                    <hr>
+                    <div style="background-color: white; padding: 12px;">
+                        <h3>Birthdays</h3>
+                        <p>Abu Yusuf Maruf have birthday today.</p>
+                    </div>
+                    <hr>
+                    <div style="background-color: white; padding: 12px;">
+                        <h3>Contacts</h3>
+                        <button class="btn btn-transparent">Mohymenul Moshi</button><br>
+                        <button class="btn btn-transparent">Khairul Islam Zibon</button><br>
+                        <button class="btn btn-transparent">Shohanur Rahman Shohan</button><br>
+                        <button class="btn btn-transparent">Sumaiya Ushnata</button><br>
+                        <button class="btn btn-transparent">Minhazul Islam</button><br>
+                        <button class="btn btn-transparent">Rabiul Islam</button><br>
+                        <button class="btn btn-transparent">Nazmul Islam</button><br>
+                        <button class="btn btn-transparent">Mahbur Rahman</button><br>
+                        <button class="btn btn-transparent">Mazharul Islam</button><br>
+                        <button class="btn btn-transparent">Din Islam</button><br>
+                        <button class="btn btn-transparent">Enamul Haque</button><br>
+                        <button class="btn btn-transparent">Mamun Ahamed</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+  </div>
+</div>
