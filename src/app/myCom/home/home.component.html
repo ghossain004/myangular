@@ -4,12 +4,12 @@
           <div class="toolbar" role="banner" style="position: fixed;">
             <img width="50px" height="50px" alt="fb_icon" src="../../../assets/images/fb_icon.png"
             />
-            <span><h3>facebook</h3></span>
+            <span><a routerLink="../home" style="text-decoration: none; color: white;"><h3>facebook</h3></a></span>
             <span style="padding-left: 10px;"><input style="font-size: 15px; padding: 14px 16px; width: 200px; border-radius: 5px; border: transparent" type="text" placeholder="search people, page, group" aria-label="search people, page, group"></span>
               <div class="spacer"></div>
-              <button class="btn btn-transparent"><i class="fa fa-home"><b> Home</b></i></button>
+              <button class="btn btn-transparent" routerLink="../home"><i class="fa fa-home"><b> Home</b></i></button>
               <button class="btn btn-transparent"><i class="fa fa-play"><b> Watch</b></i></button>
-              <button class="btn btn-transparent"><i class="fa fa-shopping-bags"><b> Marketplace</b></i></button>
+              <button class="btn btn-transparent"><i class="fa fa-shopping-basket"><b> Marketplace</b></i></button>
               <button class="btn btn-transparent"><i class="fa fa-users"><b> Group</b></i></button>
               <button class="btn btn-transparent"><i class="fa fa-gamepad"><b> Games</b></i></button>
         
@@ -26,7 +26,7 @@
         <div class="row">
             <!-- home body nav -->
             <div class="col-md-3">
-                <div style="margin-top: 30px; padding: 20px; padding-top: 0px; position: fixed; overflow:scroll; height:500px;">
+                <div style="margin-top: 30px; padding: 20px; padding-top: 0px; position: fixed; overflow-y:scroll; height:500px;">
                     <div style=" background-color: white; margin: 5px;">
                         <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: transparent; text-align: left;" routerLink="../timeline"><b>Timeline</b></button><br>
                         <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../friends"><b>Friends</b></button><br>
@@ -88,18 +88,27 @@
                         <div style="border: 1px solid; border-radius: 5px; padding: 12px; background-color: white;">
                             <a href="">Khairul Islam Zibon</a>
                             <p>
-                                The Saudi government has announced that the cost of the comprehensive insurance for foreign Umrah performers has been reduced by 63 percent.
+                                More than 3,500 desperate Rohingyas attempted deadly sea crossings in 39 boats in the Andaman Sea and the Bay of Bengal in 2022, according to the latest data from UNHCR, the UN Refugee Agency.
 
-                                The Ministry of Hajj and Umrah of KSA has cut the cost from SR 235 to SR 87 with effect from January 10, reports Saudi Gazette.
+                                This represents a 360 per cent increase on the year before when some 700 people made similar journeys, UNHCR spokesperson Shabia Mantoo said at a press briefing in Geneva on Tuesday (Jan 17).
 
-                                The insurance policy for Umrah is a unified policy that is covered by those who perform Umrah from different Muslim countries of the world including Bangladesh.
-                                It is included in the visa procedures and covers emergency cases such as treatment, admission, hospitalization, pregnancy, emergency childbirth, emergency dental cases, traffic accident injuries, dialysis cases, and internal and external medical evacuation.
+                                In the absence of a comprehensive regional response to address these perilous maritime movements, UNHCR warns that more people will die on the high seas, under the watch of many coastal States.
+                                UNHCR has recorded an alarming rise in the death toll. At least 348 individuals died or went missing at sea in 2022, making it one of the deadliest years since 2014.
 
-                                It also covers general cases such as accidental permanent total disability, cases of death and death due to natural disasters, returning the body of the deceased to his country, and blood money issued by a court ruling. It also includes covers for flight delay compensation and flight cancellation compensation, it said.
+                                Some 3,040 individuals who undertook the sea journey disembarked in 2022, primarily in Myanmar, Malaysia, Indonesia and Bangladesh. Nearly 45 per cent of those who disembarked were women and children.
 
-                                The said that the insurance coverage period is 90 days, starting from the day of entering the KSA, and the scope of its coverage is only within Saudi Arabia.
+                                In the last two months of 2022, four boats carrying over 450 Rohingya disembarked in Aceh, Indonesia. One boat carrying over 100 Rohingya disembarked in Sri Lanka. One boat is feared to have sunk in early December with approximately 180 individuals on board. Several boats that departed in December remained at sea as of the end of the year.
 
-                                Intending Umrah performers can visit the website of the Comprehensive Insurance Program for the Guests of Rahman to view the Umrah insurance policy, verify its validity, and know services providers.
+                                Calls by UNHCR to maritime authorities in the region to rescue and disembark people in distress have gone unheeded with many boats adrift for weeks.
+
+                                Most boats departed from Myanmar and Bangladesh, highlighting the growing sense of desperation amongst Rohingya in those two countries, the UNHCR Spokesperson said.
+
+                                Those who have disembarked report that they undertook these dangerous sea journeys in an effort to find protection, security, family reunification, and livelihoods in other countries. Among them are victims of trafficking, unaccompanied and separated children, and survivors of sexual- and gender-based violence.
+                                The current crisis in the Bay of Bengal and the Andaman Sea is a crisis of solidarity. The Bali Process, a forum for policy dialogue, information sharing and cooperation to address people smuggling, human trafficking and related transnational crime, will hold its 8th Ministerial meeting in February.
+
+                                UNHCR repeats its call for prompt search and rescue and timely disembarkation in a place of safety, and for support to countries where Rohingya refugees are disembarked. We call on countries to redouble efforts to prevent human smuggling and trafficking.There is also a need for humanitarian responsibility to be more evenly distributed among countries in the region to ensure protection responses are predictable, equitable, and sustainable.
+
+                                The region and the international community need to support efforts to address the root causes of displacement in Myanmar. Until these are resolved, refugees will continue to undertake dangerous journeys in search of safety.
                             </p>
                             <hr>
                             <div>
@@ -114,7 +123,7 @@
             <!-- home body right -->
             <div class="col-md-3" style="">
                 <div style="padding: 20px; margin: 5px;">
-                    <div style="overflow:scroll; height: 500px; position: fixed;">
+                    <div style="overflow-y:scroll; height: 500px; position: fixed;">
                         <div style="background-color: white; padding: 12px;">
                             <span style="margin-right: 20px; font-size: 25px;"><b>Friend Requests</b></span>
                             <a href="" style="font-size: 20px;">See All</a>
