@@ -1,18 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Route, Router } from '@angular/router';
-import { SignupService } from 'src/app/service/signup.service';
+import { Router } from '@angular/router';
+import { PostService } from 'src/app/service/post.service';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  selector: 'app-post',
+  templateUrl: './post.component.html',
+  styleUrls: ['./post.component.css']
 })
-export class RegisterComponent implements OnInit{
+export class PostComponent {
   form!: FormGroup;
 
   constructor(
-    public signupService: SignupService,
+    public postService: PostService,
     private router: Router
   ){}
 
@@ -35,7 +35,7 @@ export class RegisterComponent implements OnInit{
 
   submit(){
     console.log(this.form.value);
-    this.signupService.create(this.form.value).subscribe((res:any) => {
+    this.postService.create(this.form.value).subscribe((res:any) => {
          console.log('Post created successfully!');
          this.router.navigateByUrl('post/index');
     })

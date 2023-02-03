@@ -9,36 +9,38 @@
                 <p>It's quick and easy.</p>
             </div>
             <hr>
-            <div style="padding: 12px;">
-                <span >
-                    <input type="text" name="firstName" id="firstName" placeholder="First Name" style="font-size: 17px; padding: 14px 16px; width: 50%; border-radius: 5px;">
-                </span>
-                <span>
-                    <input type="text" name="lastName" id="lastName" placeholder="Last Name" style="font-size: 17px; padding: 14px 16px; width: 50%; border-radius: 5px;">
-                </span>
-            </div>
-            <div style="padding: 12px;">
-                <input type="text" name="email" id="email" placeholder="Mobile number or email address" style="font-size: 17px; padding: 14px 16px; width: 100%; border-radius: 5px;">
-            </div>
-            <div style="padding: 12px;">
-                <input type="text" name="password" id="password" placeholder="New password" style="font-size: 17px; padding: 14px 16px; width: 100%; border-radius: 5px;">
-            </div>
-            <div style="padding: 12px;">
-                <input type="text" name="dob" id="dob" placeholder="Date of birth" onfocus="(this.type='date')" style="font-size: 17px; padding: 14px 16px; width: 100%; border-radius: 5px;">
-            </div>
-            <div name="gender" id="gender" style="padding: 12px;">
-                Gender <br>
-                <input type="radio" name="gender" value="Male">Male
-                <input type="radio" name="gender" value="Female">Female
-                <input type="radio" name="gender" value="Custom">Custom
-            </div>
-            <div style="padding: 12px;">
-                <p>People who use our service may have uploaded your contact information to Facebook. Learn more.</p>
-                <p>By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.</p>
-            </div>
-            <div style="padding: 12px; text-align: center; padding: 0 32px; height: 36px; border-radius: 6px; margin-bottom: 20px;">
-                <button class="btn btn-success" onclick="alert('User Create Success')" routerLink="../login">Sign Up</button>
-            </div>
+            <form [formGroup]="form" (ngSubmit)="submit()">
+                <div class="form-group" style="padding: 12px;">
+                    <span >
+                        <input formControlName="firstName" type="text" name="firstName" id="firstName" placeholder="First Name" style="font-size: 17px; padding: 14px 16px; width: 50%; border-radius: 5px;">
+                    </span>
+                    <span>
+                        <input formControlName="lastName" type="text" name="lastName" id="lastName" placeholder="Last Name" style="font-size: 17px; padding: 14px 16px; width: 50%; border-radius: 5px;">
+                    </span>
+                </div>
+                <div class="form-group" style="padding: 12px;">
+                    <input formControlName="email" type="text" name="email" id="email" placeholder="Mobile number or email address" style="font-size: 17px; padding: 14px 16px; width: 100%; border-radius: 5px;">
+                </div>
+                <div class="form-group" style="padding: 12px;">
+                    <input formControlName="password" type="text" name="password" id="password" placeholder="New password" style="font-size: 17px; padding: 14px 16px; width: 100%; border-radius: 5px;">
+                </div>
+                <div class="form-group" style="padding: 12px;">
+                    <input formControlName="dob" type="text" name="dob" id="dob" placeholder="Date of birth" onfocus="(this.type='date')" style="font-size: 17px; padding: 14px 16px; width: 100%; border-radius: 5px;">
+                </div>
+                <!-- <div class="form-group" name="gender" id="gender" style="padding: 12px;">
+                    Gender <br>
+                    <input  formControlName="male" type="radio" name="gender" value="Male">Male
+                    <input formControlName="female" type="radio" name="gender" value="Female">Female
+                    <input formControlName="custom" type="radio" name="gender" value="Custom">Custom
+                </div> -->
+                <div style="padding: 12px;">
+                    <p>People who use our service may have uploaded your contact information to Facebook. Learn more.</p>
+                    <p>By clicking Sign Up, you agree to our Terms, Privacy Policy and Cookies Policy. You may receive SMS notifications from us and can opt out at any time.</p>
+                </div>
+                <div style="padding: 12px; text-align: center; padding: 0 32px; height: 36px; border-radius: 6px; margin-bottom: 20px;">
+                    <button class="btn btn-success" >Sign Up</button>
+                </div>
+            </form>
         </div>
         <div class="col-md-3"></div>
     </div>

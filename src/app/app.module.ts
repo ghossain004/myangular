@@ -24,6 +24,7 @@ import { FavoriteComponent } from './myCom/favorite/favorite.component';
 import { MessageComponent } from './myCom/message/message.component';
 import { NotificationComponent } from './myCom/notification/notification.component';
 import { GroupsComponent } from './myCom/groups/groups.component';
+import { PostComponent } from './myCom/post/post.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { GroupsComponent } from './myCom/groups/groups.component';
     FavoriteComponent,
     MessageComponent,
     NotificationComponent,
-    GroupsComponent
+    GroupsComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
