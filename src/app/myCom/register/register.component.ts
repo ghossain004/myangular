@@ -37,7 +37,7 @@ export class RegisterComponent implements OnInit{
     console.log(this.form.value);
     this.signupService.create(this.form.value).subscribe((res:any) => {
          console.log('Post created successfully!');
-         this.router.navigateByUrl('post/index');
+         this.router.navigateByUrl('login');
     })
   }
 }

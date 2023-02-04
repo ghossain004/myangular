@@ -1,5 +1,39 @@
 {
   "signup": [
-    
+    {
+      "firstName": "Golam",
+      "lastName": "Hossain",
+      "email": "ghossain004@gmail.com",
+      "password": "1234",
+      "dob": "1994-10-01",
+      "id": 1
+    },
+    {
+      "firstName": "Md. Golam",
+      "lastName": "Hossain",
+      "email": "golamhossain410@yahoo.com",
+      "password": "12345",
+      "dob": "2023-02-04",
+      "id": 2
+    }
+  ],
+  "posts": [
+    {
+      "userName": "Golam Hossain",
+      "postBody": "post",
+      "id": 1
+    }
+  ],
+  "comment": [
+    {
+      "userName": "Golam Hossain",
+      "commentBody": "aaa",
+      "id": 1
+    },
+    {
+      "userName": "Golam Hossain",
+      "commentBody": "111",
+      "id": 2
+    }
   ]
 }

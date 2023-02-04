@@ -1,13 +1,13 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { catchError, Observable, throwError } from "rxjs";
-import { Signup } from "../model/signup.model";
+import { Login } from "../model/login.model";
 
 @Injectable({
     providedIn: 'root'
 })
 
-export class SignupService {
+export class LoginService {
     private apiURL = "http://localhost:3000";
 
     httpOptions = {
@@ -20,16 +20,16 @@ export class SignupService {
 
     getAll(): Observable<any> {
   
-        return this.httpClient.get(this.apiURL + '/signup', this.httpOptions)
+        return this.httpClient.get(this.apiURL + '/get', this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)
         )
       }
 
-      create(signup:Signup): Observable<any> {
+      create(login:Login): Observable<any> {
   
-        return this.httpClient.post(this.apiURL + '/signup', JSON.stringify(signup), this.httpOptions)
+        return this.httpClient.post(this.apiURL + '/signup', JSON.stringify(login), this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)
@@ -38,16 +38,16 @@ export class SignupService {
 
       find(id:number): Observable<any> {
   
-        return this.httpClient.get(this.apiURL + '/signup/' + id)
+        return this.httpClient.get(this.apiURL + '/find/' + id)
       
         .pipe(
           catchError(this.errorHandler)
         )
       }
 
-      update(id:number, signup:Signup): Observable<any> {
+      update(id:number, login:Login): Observable<any> {
   
-        return this.httpClient.put(this.apiURL + '/signup/' + id, JSON.stringify(signup), this.httpOptions)
+        return this.httpClient.put(this.apiURL + '/update/' + id, JSON.stringify(post), this.httpOptions)
      
         .pipe( 
           catchError(this.errorHandler)
@@ -55,7 +55,7 @@ export class SignupService {
       }
 
       delete(id:number){
-        return this.httpClient.delete(this.apiURL + '/signup/' + id, this.httpOptions)
+        return this.httpClient.delete(this.apiURL + '/delete/' + id, this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)

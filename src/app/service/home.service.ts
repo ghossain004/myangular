@@ -7,7 +7,7 @@ import { Signup } from "../model/signup.model";
     providedIn: 'root'
 })
 
-export class SignupService {
+export class HomeService {
     private apiURL = "http://localhost:3000";
 
     httpOptions = {
@@ -20,7 +20,7 @@ export class SignupService {
 
     getAll(): Observable<any> {
   
-        return this.httpClient.get(this.apiURL + '/signup', this.httpOptions)
+        return this.httpClient.get(this.apiURL + '/get', this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)
@@ -38,7 +38,7 @@ export class SignupService {
 
       find(id:number): Observable<any> {
   
-        return this.httpClient.get(this.apiURL + '/signup/' + id)
+        return this.httpClient.get(this.apiURL + '/find/' + id)
       
         .pipe(
           catchError(this.errorHandler)
@@ -47,7 +47,7 @@ export class SignupService {
 
       update(id:number, signup:Signup): Observable<any> {
   
-        return this.httpClient.put(this.apiURL + '/signup/' + id, JSON.stringify(signup), this.httpOptions)
+        return this.httpClient.put(this.apiURL + '/update/' + id, JSON.stringify(signup), this.httpOptions)
      
         .pipe( 
           catchError(this.errorHandler)
@@ -55,7 +55,7 @@ export class SignupService {
       }
 
       delete(id:number){
-        return this.httpClient.delete(this.apiURL + '/signup/' + id, this.httpOptions)
+        return this.httpClient.delete(this.apiURL + '/delete/' + id, this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)

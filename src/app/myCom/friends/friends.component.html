@@ -18,6 +18,7 @@
             <button class="btn btn-transparent" routerLink="../message"><i class="fa fa-comment"><b> Message</b></i></button>
             <button class="btn btn-transparent" routerLink="../notification"><i class="fa fa-bell"><b> Notification</b></i></button>
             <button class="btn btn-transparent"><i class="fa fa-cog"><b> Account</b></i></button>
+            <button class="btn btn-transparent" routerLink="../login"><i class="fa fa-sign-out"><b> Logout</b></i></button>
         </div>
   </div>
 
@@ -43,42 +44,10 @@
         </div>
       
         <div class="col-md-6">
-          <div style="margin-top: 100px;">
-              <h4>Mohymenul Moshi</h4>
+          <div *ngFor="let friend of friends" style="margin-top: 100px;">
+              <h4>{{friend.firstName}}</h4>
               <input type="button" value="Friend">
               <hr>
-              <h4>Khairul Islam Zibon</h4>
-              <input type="button" value="Friend">
-              <hr>
-              <h4>Shohanur Rahman Shohan</h4>
-              <input type="button" value="Friend">
-              <hr>
-              <h4>Sumaiya Ushnata</h4>
-              <input type="button" value="Friend">
-              <hr>
-              <h4>Minhazul Islam</h4>
-              <input type="button" value="Friend">
-              <hr>
-              <h4>Rabiul Islam</h4>
-              <input type="button" value="Friend">
-              <hr>
-              <h4>Nazmul Hasan Topu</h4>
-              <input type="button" value="Friend">
-              <hr>
-              <h4>Mahabur Rahman</h4>
-              <input type="button" value="Friend">
-              <hr>
-              <h4>Mazharul Islam</h4>
-              <input type="button" value="Friend">
-              <hr>
-              <h4>Din Islam</h4>
-              <input type="button" value="Friend">
-              <hr>
-              <h4>Mamun Ahamed</h4>
-              <input type="button" value="Friend">
-              <hr>
-              <h4>Enamul Haque</h4>
-              <input type="button" value="Friend">
           </div>
         </div>
       
