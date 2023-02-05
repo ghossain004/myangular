@@ -1,13 +1,13 @@
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { catchError, Observable, throwError } from "rxjs";
-import { Message } from "../model/message.model";
+import { SubComment } from "../model/subcomment.model";
 
 @Injectable({
     providedIn: 'root'
 })
 
-export class MessageService {
+export class SubCommentService {
     private apiURL = "http://localhost:3000";
 
     httpOptions = {
@@ -20,16 +20,16 @@ export class MessageService {
 
     getAll(): Observable<any> {
   
-        return this.httpClient.get(this.apiURL + '/message')
+        return this.httpClient.get(this.apiURL + '/subcomment')
       
         .pipe(
           catchError(this.errorHandler)
         )
       }
 
-      create(post:Message): Observable<any> {
+      create(subComment:SubComment): Observable<any> {
   
-        return this.httpClient.post(this.apiURL + '/message', JSON.stringify(post), this.httpOptions)
+        return this.httpClient.post(this.apiURL + '/subcomment', JSON.stringify(subComment), this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)
@@ -38,16 +38,16 @@ export class MessageService {
 
       find(id:number): Observable<any> {
   
-        return this.httpClient.get(this.apiURL + '/message/' + id)
+        return this.httpClient.get(this.apiURL + '/subcomment/' + id)
       
         .pipe(
           catchError(this.errorHandler)
         )
       }
 
-      update(id:number, post:Message): Observable<any> {
+      update(id:number, subComment:SubComment): Observable<any> {
   
-        return this.httpClient.put(this.apiURL + '/message/' + id, JSON.stringify(post), this.httpOptions)
+        return this.httpClient.put(this.apiURL + '/subcomment/' + id, JSON.stringify(subComment), this.httpOptions)
      
         .pipe( 
           catchError(this.errorHandler)
@@ -55,7 +55,7 @@ export class MessageService {
       }
 
       delete(id:number){
-        return this.httpClient.delete(this.apiURL + '/message/' + id, this.httpOptions)
+        return this.httpClient.delete(this.apiURL + '/subcomment/' + id, this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)

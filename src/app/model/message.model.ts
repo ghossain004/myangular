@@ -1,5 +1,5 @@
 export interface Message {
     id :number;
-    messageBody :string;
-    
+    userName :string;
+    msgBody :string;
 }

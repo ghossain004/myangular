@@ -47,16 +47,27 @@
             <!-- home body center -->
             <div class="col-md-6">
                 <div style="margin: 5px; margin-top: 30px; padding: 20px; background-color: white;">
-                    <br><br><br>
-                    <div>
-                        <textarea name="" id="" cols="" rows="10" style="padding: 10px; width: 100%;" placeholder="write your message here"></textarea>
-                        <input type="button" value="Send" class="btn btn-primary" style="border-radius: 10px;">
+                    <div *ngFor="let message of messages">
+                        <br><hr>
+                            <a href="" style="text-decoration: none;">{{message.userName}}</a>
+                                                    
+                            <p>
+                            {{message.msgBody}}
+                            </p>
                     </div>
+                    <br>
+                    <form [formGroup]="messageForm" (ngSubmit)="messageSubmit()">
+                        <div>
+                            <input id="id" type="text" hidden formControlName="userName"/>
+                            <textarea name="" id="" cols="5" rows="1" placeholder="write a message" formControlName="msgBody" style="font-size: 17px; padding: 14px 16px; width: 70%; border-radius: 10px;"></textarea><br>
+                            <button class="btn btn-primary" style="margin-right: 100px;">Send</button>
+                        </div>
+                    </form>
                 </div>
             </div>
 
             <!-- home body right -->
-            <div class="col-md-3" style="">
+            <div class="col-md-3">
                 
             </div>
         </div>

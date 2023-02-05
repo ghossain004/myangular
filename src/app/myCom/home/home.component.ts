@@ -4,8 +4,10 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Comment } from 'src/app/model/comment.model';
 import { Post } from 'src/app/model/post.model';
+import { SubComment } from 'src/app/model/subcomment.model';
 import { CommentService } from 'src/app/service/comment.service';
 import { PostService } from 'src/app/service/post.service';
+import { SubCommentService } from 'src/app/service/subcomment.service';
 
 @Component({
   selector: 'app-home',
@@ -15,14 +17,17 @@ import { PostService } from 'src/app/service/post.service';
 export class HomeComponent implements OnInit{
   homeForm!: FormGroup;
   commentForm!: FormGroup;
+  subcommentForm!: FormGroup;
 
 
   posts!: Post[];
   comments!: Comment[];
+  subComment!: SubComment[];
 
   constructor(
     public postService: PostService,
     public commentService: CommentService,
+    public subCommentService: SubCommentService,
     private router: Router
   ){}
   
@@ -37,7 +42,13 @@ export class HomeComponent implements OnInit{
  this.commentService.getAll().subscribe((res:any) => {
   this.comments = res;
 
-  console.log('Posts get successfully!', this.posts);
+  console.log('Comment get successfully!', this.comments);
+
+})
+
+this.subCommentService.getAll().subscribe((res:any) => {
+  this.subComment = res;
+  console.log('SubComment get successfully!', this.subComment);
 
 })
 
@@ -49,6 +60,11 @@ export class HomeComponent implements OnInit{
     this.commentForm = new FormGroup({
       userName: new FormControl('', [Validators.required]),
       commentBody: new FormControl('', Validators.required),
+    })
+
+    this.subcommentForm = new FormGroup({
+      userName: new FormControl('', [Validators.required]),
+      subCommentBody: new FormControl('', Validators.required),
     })
   }
 
@@ -87,6 +103,16 @@ export class HomeComponent implements OnInit{
     console.log(this.commentForm.value);
     this.commentForm.value.userName = "Golam Hossain"
     this.commentService.create(this.commentForm.value).subscribe((res:any) => {
+         console.log('Comment created successfully!');
+        //  this.router.navigateByUrl('login');
+        this.ngOnInit();
+    })
+  }
+
+  replaySubmit(){
+    console.log(this.subcommentForm.value);
+    this.subcommentForm.value.userName = "Golam Hossain"
+    this.subCommentService.create(this.subcommentForm.value).subscribe((res:any) => {
          console.log('Comment created successfully!');
         //  this.router.navigateByUrl('login');
         this.ngOnInit();
