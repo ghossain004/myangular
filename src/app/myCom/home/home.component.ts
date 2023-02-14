@@ -4,9 +4,11 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Comment } from 'src/app/model/comment.model';
 import { Post } from 'src/app/model/post.model';
+import { Signup } from 'src/app/model/signup.model';
 import { SubComment } from 'src/app/model/subcomment.model';
 import { CommentService } from 'src/app/service/comment.service';
 import { PostService } from 'src/app/service/post.service';
+import { SignupService } from 'src/app/service/signup.service';
 import { SubCommentService } from 'src/app/service/subcomment.service';
 
 @Component({
