@@ -8,7 +8,8 @@ import { Signup } from "../model/signup.model";
 })
 
 export class SignupService {
-    private apiURL = "http://localhost:3000";
+    private apiURL = "http://localhost:8080/api";
+    // private apiURL = "http://localhost:3000";
 
     httpOptions = {
         headers: new HttpHeaders({
@@ -20,7 +21,7 @@ export class SignupService {
 
     getAll(): Observable<any> {
   
-        return this.httpClient.get(this.apiURL + '/signup', this.httpOptions)
+        return this.httpClient.get(this.apiURL + '/posts/', this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)
@@ -29,7 +30,7 @@ export class SignupService {
 
       create(signup:Signup): Observable<any> {
   
-        return this.httpClient.post(this.apiURL + '/signup', JSON.stringify(signup), this.httpOptions)
+        return this.httpClient.post(this.apiURL + '/posts/', JSON.stringify(signup), this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)
@@ -38,7 +39,7 @@ export class SignupService {
 
       find(id:number): Observable<any> {
   
-        return this.httpClient.get(this.apiURL + '/signup/' + id)
+        return this.httpClient.get(this.apiURL + '/posts/' + id)
       
         .pipe(
           catchError(this.errorHandler)
@@ -47,7 +48,7 @@ export class SignupService {
 
       update(id:number, signup:Signup): Observable<any> {
   
-        return this.httpClient.put(this.apiURL + '/signup/' + id, JSON.stringify(signup), this.httpOptions)
+        return this.httpClient.put(this.apiURL + '/posts/' + id, JSON.stringify(signup), this.httpOptions)
      
         .pipe( 
           catchError(this.errorHandler)
@@ -55,7 +56,7 @@ export class SignupService {
       }
 
       delete(id:number){
-        return this.httpClient.delete(this.apiURL + '/signup/' + id, this.httpOptions)
+        return this.httpClient.delete(this.apiURL + '/posts/' + id, this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)

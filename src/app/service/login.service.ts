@@ -8,7 +8,8 @@ import { Login } from "../model/login.model";
 })
 
 export class LoginService {
-    private apiURL = "http://localhost:3000";
+    // private apiURL = "http://localhost:3000";
+    private apiURL = "http://localhost:8080/api";
 
     httpOptions = {
         headers: new HttpHeaders({

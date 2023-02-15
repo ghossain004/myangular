@@ -1,9 +1,9 @@
 export interface Signup {
-    id :number;
+    userId :number;
     firstName :string;
     lastName :string;
     email :string;
     password :string;
     dob :string;
-    // gender :string;
+    gender :string;
 }

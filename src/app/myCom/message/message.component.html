@@ -28,18 +28,9 @@
             <div class="col-md-3">
                 <div style="margin-top: 30px; padding: 20px; padding-top: 0px; position: fixed; overflow-y:scroll; height:500px;">
                     <div style=" background-color: white; margin: 5px;">
-                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: transparent; text-align: left;"><b>Mohymenul Moshi</b></button><br>
-                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;"><b>Khairul Islam Zibon</b></button><br>
-                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;"><b>Shohanur Rahman Shohan</b></button><br>
-                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;"><b>Sumaiya Ushnata</b></button><br>
-                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;"><b>Minhazul Islam</b></button><br>
-                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;"><b>Rabiul Islam</b></button><br>
-                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;"><b>Nazmul Hasan Topu</b></button><br>
-                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;"><b>Mahabur Rahman</b></button><br>
-                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;"><b>Mazharul Islam</b></button><br>
-                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;"><b>Din Islam</b></button><br>
-                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;"><b>Mamun Ahamed</b></button><br>
-                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;"><b>Enamul Haque</b></button>
+                        <div *ngFor="let signup of signup">
+                            <h6><a href="" style="text-decoration: none;">{{signup.firstName}} {{signup.lastName}}</a></h6><br>
+                        </div>
                     </div>
                 </div>
             </div>

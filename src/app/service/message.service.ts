@@ -8,7 +8,8 @@ import { Message } from "../model/message.model";
 })
 
 export class MessageService {
-    private apiURL = "http://localhost:3000";
+    // private apiURL = "http://localhost:3000";
+    private apiURL = "http://localhost:8080/api";
 
     httpOptions = {
         headers: new HttpHeaders({
@@ -20,7 +21,7 @@ export class MessageService {
 
     getAll(): Observable<any> {
   
-        return this.httpClient.get(this.apiURL + '/message')
+        return this.httpClient.get(this.apiURL + '/posts')
       
         .pipe(
           catchError(this.errorHandler)
@@ -29,7 +30,7 @@ export class MessageService {
 
       create(post:Message): Observable<any> {
   
-        return this.httpClient.post(this.apiURL + '/message', JSON.stringify(post), this.httpOptions)
+        return this.httpClient.post(this.apiURL + '/posts', JSON.stringify(post), this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)
@@ -38,7 +39,7 @@ export class MessageService {
 
       find(id:number): Observable<any> {
   
-        return this.httpClient.get(this.apiURL + '/message/' + id)
+        return this.httpClient.get(this.apiURL + '/posts/' + id)
       
         .pipe(
           catchError(this.errorHandler)
@@ -47,7 +48,7 @@ export class MessageService {
 
       update(id:number, post:Message): Observable<any> {
   
-        return this.httpClient.put(this.apiURL + '/message/' + id, JSON.stringify(post), this.httpOptions)
+        return this.httpClient.put(this.apiURL + '/posts/' + id, JSON.stringify(post), this.httpOptions)
      
         .pipe( 
           catchError(this.errorHandler)
@@ -55,7 +56,7 @@ export class MessageService {
       }
 
       delete(id:number){
-        return this.httpClient.delete(this.apiURL + '/message/' + id, this.httpOptions)
+        return this.httpClient.delete(this.apiURL + '/posts/' + id, this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)

@@ -1,1 +1,175 @@
-<p>profile works!</p>
+<div class="container-fluid">
+    <!-- home header -->
+    <div>        
+          <div class="toolbar" role="banner" style="position: fixed;">
+            <!-- <img width="50px" height="50px" alt="fb_icon" src="../../../assets/images/fb_icon.png"
+            /> -->
+            <span><a routerLink="../home" style="text-decoration: none; color: white;"><h3>socialbook</h3></a></span>
+            <span style="padding-left: 10px;"><input style="font-size: 15px; padding: 14px 16px; width: 200px; border-radius: 5px; border: transparent" type="text" placeholder="search people, page, group" aria-label="search people, page, group"></span>
+              <div class="spacer"></div>
+              <button class="btn btn-transparent" routerLink="../home"><i class="fa fa-home"><b> Home</b></i></button>
+              <button class="btn btn-transparent"><i class="fa fa-play"><b> Watch</b></i></button>
+              <button class="btn btn-transparent"><i class="fa fa-shopping-basket"><b> Marketplace</b></i></button>
+              <button class="btn btn-transparent"><i class="fa fa-users"><b> Group</b></i></button>
+              <button class="btn btn-transparent"><i class="fa fa-gamepad"><b> Games</b></i></button>
+        
+              <div class="spacer"></div>
+              <button class="btn btn-transparent"><i class="fa fa-bars"><b> Menu</b></i></button>
+              <button class="btn btn-transparent" routerLink="../message"><i class="fa fa-comment"><b> Message</b></i></button>
+              <button class="btn btn-transparent" routerLink="../notification"><i class="fa fa-bell"><b> Notification</b></i></button>
+              <button class="btn btn-transparent"><i class="fa fa-cog"><b> Account</b></i></button>
+              <button class="btn btn-transparent" routerLink="../login"><i class="fa fa-sign-out"><b> Logout</b></i></button>
+          </div>
+    </div>
+
+    <!-- home body -->
+    <div style="margin-top: 50px;">
+        <div class="row">
+            <!-- home body nav -->
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div style="margin-top: 30px; padding: 20px; padding-top: 0px; position: fixed; overflow-y:scroll; height:500px;">
+                    <div style=" background-color: white; margin: 5px;">
+                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: transparent; text-align: left;" routerLink="../timeline"><b>Timeline</b></button><br>
+                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../friends"><b>Friends</b></button><br>
+                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../memories"><b>Memories</b></button><br>
+                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../groups"><b>Groups</b></button><br>
+                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../mostrecent"><b>Most Recent</b></button><br>
+                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../marketplace"><b>Marketplace</b></button><br>
+                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../watch"><b>Watch</b></button><br>
+                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../saved"><b>Saved</b></button><br>
+                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../pages"><b>Pages</b></button><br>
+                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../events"><b>Events</b></button><br>
+                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;" routerLink="../favorite"><b>Favorite</b></button><br>
+                        <button class="btn btn-transparent" style="font-size: 20px; padding: 14px 16px; width: 100%; border-radius: 5px; border: hidden; text-align: left;"><b>See More</b></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- home body center -->
+
+                                
+                    <!-- Signup Body -->
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" style="border-radius: 10px; background-color: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1); margin-top: 30px;">
+                        <div>
+                            <h1>User Profile</h1>
+                        </div>
+                        <hr>
+                        <form [formGroup]="form" (ngSubmit)="submit()">
+                            <div class="form-group" style="padding: 8px;">
+                                <span >
+                                    <input formControlName="firstName" type="text" id="firstName" placeholder="First Name" style="font-size: 15px; padding: 10px; width: 49%; border-radius: 5px; margin-right: 10px;">
+                                </span>
+
+                                <span>
+                                    <input formControlName="lastName" type="text" id="lastName" placeholder="Last Name" style="font-size: 15px; padding: 10px; width: 49%; border-radius: 5px;">
+                                </span>
+                            </div>
+
+                            <div class="form-group" style="padding: 8px;">
+                                <span >
+                                    <input formControlName="fatherName" type="text" id="fatherName" placeholder="Father Name" style="font-size: 15px; padding: 10px; width: 49%; border-radius: 5px; margin-right: 10px;">
+                                </span>
+
+                                <span>
+                                    <input formControlName="motherName" type="text" id="motherName" placeholder="Mother Name" style="font-size: 15px; padding: 10px; width: 49%; border-radius: 5px;">
+                                </span>
+                            </div>
+
+                            <div class="form-group" id="gender" style="padding: 8px;">
+                                Gender:  
+                                <input type="radio" name="gender" value="Male" formControlName="gender">Male
+                                <input type="radio" name="gender" value="Female" formControlName="gender">Female
+                                <input type="radio" name="gender" value="Custom" formControlName="gender">Custom
+                            </div>
+
+                            <div class="form-group" style="padding: 8px;">
+                                <input formControlName="email" type="text" id="email" placeholder="Email address" style="font-size: 15px; padding: 10px; width: 100%; border-radius: 5px;">
+                            </div>
+
+                            <div class="form-group" style="padding: 8px;">
+                                <input formControlName="phone" type="text" id="phone" placeholder="Mobile number" style="font-size: 15px; padding: 10px; width: 100%; border-radius: 5px;">
+                            </div>
+
+                            <div class="form-group" style="padding: 8px;">
+                                <input formControlName="password" type="text" id="password" placeholder="New password" style="font-size: 15px; padding: 10px; width: 100%; border-radius: 5px;">
+                            </div>
+
+                            <div class="form-group" style="padding: 8px;">
+                                <input formControlName="dob" type="text" id="dob" placeholder="Date of birth" onfocus="(this.type='date')" style="font-size: 15px; padding: 10px; width: 100%; border-radius: 5px;">
+                            </div>
+
+                            <div class="form-group" style="padding: 8px;">
+                                <input formControlName="presentAddress" type="text" id="dob" placeholder="Present Address" style="font-size: 15px; padding: 10px; width: 100%; border-radius: 5px;">
+                            </div>
+
+                            <div class="form-group" style="padding: 8px;">
+                                <input formControlName="permanentAddress" type="text" id="dob" placeholder="Permanent Address" style="font-size: 15px; padding: 10px; width: 100%; border-radius: 5px;">
+                            </div>
+
+                            <div class="form-group" style="padding: 8px;">
+                                Religion: 
+                                <select formControlName="religion" id="religion">
+                                    <!-- <option value="Select One" selected="selected">Select One</option> -->
+                                    <option value="Islam">Islam</option>
+                                    <option value="Hindu">Hindu</option>
+                                    <option value="Christian">Christian</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group" style="padding: 8px;">
+                                Marital Status: 
+                                <select formControlName="maritalStatus" id="maritalStatus">
+                                    <!-- <option value="Select One" selected="selected">Select One</option> -->
+                                    <option value="Single">Single</option>
+                                    <option value="Married">Married</option>
+                                </select>
+                            </div>
+                            
+                            <div style="padding: 8px; text-align: center; padding: 0 32px; height: 36px; border-radius: 6px; margin-bottom: 20px;">
+                                <button class="btn btn-success">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+
+            
+
+            <!-- home body right -->
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <div style="margin-top: 30px; margin-left: 80px;">
+                    <div style="overflow-y:scroll; height: 500px; position: fixed;">
+                        <div style="background-color: white; padding: 12px;">
+                            <span style="margin-right: 20px; font-size: 25px;"><b>Friend Requests</b></span>
+                            <a href="" style="font-size: 20px;">See All</a>
+                            <h6>Abu Yusuf Maruf</h6>
+                            <button class="btn btn-primary m-3">Confirm</button>
+                            <button class="btn btn-dark">Delete</button>
+                        </div>
+                        <hr>
+                        <div style="background-color: white; padding: 12px;">
+                            <h3>Birthdays</h3>
+                            <p>Abu Yusuf Maruf have birthday today.</p>
+                        </div>
+                        <hr>
+                        <div style="background-color: white; padding: 12px;">
+                            <h3>Contacts</h3>
+                            <button class="btn btn-transparent">Mohymenul Moshi</button><br>
+                            <button class="btn btn-transparent">Khairul Islam Zibon</button><br>
+                            <button class="btn btn-transparent">Shohanur Rahman Shohan</button><br>
+                            <button class="btn btn-transparent">Sumaiya Ushnata</button><br>
+                            <button class="btn btn-transparent">Minhazul Islam</button><br>
+                            <button class="btn btn-transparent">Rabiul Islam</button><br>
+                            <button class="btn btn-transparent">Nazmul Islam</button><br>
+                            <button class="btn btn-transparent">Mahbur Rahman</button><br>
+                            <button class="btn btn-transparent">Mazharul Islam</button><br>
+                            <button class="btn btn-transparent">Din Islam</button><br>
+                            <button class="btn btn-transparent">Enamul Haque</button><br>
+                            <button class="btn btn-transparent">Mamun Ahamed</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

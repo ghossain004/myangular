@@ -1,81 +1,15 @@
 {
   "signup": [
-    {
-      "firstName": "Golam",
-      "lastName": "Hossain",
-      "email": "ghossain004@gmail.com",
-      "password": "1234",
-      "dob": "1994-10-01",
-      "id": 1
-    },
-    {
-      "firstName": "Md. Golam",
-      "lastName": "Hossain",
-      "email": "golamhossain410@yahoo.com",
-      "password": "12345",
-      "dob": "2023-02-04",
-      "id": 2
-    },
-    {
-      "firstName": "Mohymenul",
-      "lastName": "Moshi",
-      "email": "golamhossain410@yahoo.com",
-      "password": "12345",
-      "dob": "2023-02-04",
-      "id": 3
-    },
-    {
-      "firstName": "Khairul",
-      "lastName": "Islam",
-      "email": "golamhossain410@yahoo.com",
-      "password": "12345",
-      "dob": "2023-02-04",
-      "id": 4
-    },
-    {
-      "firstName": "Sohanur",
-      "lastName": "Rahman",
-      "email": "golamhossain410@yahoo.com",
-      "password": "12345",
-      "dob": "2023-02-04",
-      "id": 5
-    }
+    
   ],
   "posts": [],
   "comment": [
-    {
-      "userName": "Golam Hossain",
-      "commentBody": "ddd",
-      "id": 1
-    },
-    {
-      "userName": "Golam Hossain",
-      "commentBody": "comment",
-      "id": 2
-    }
+    
   ],
   "subcomment": [
-    {
-      "userName": "Golam Hossain",
-      "subCommentBody": "ff",
-      "id": 1
-    },
-    {
-      "userName": "Golam Hossain",
-      "subCommentBody": "replay",
-      "id": 2
-    }
+    
   ],
   "message": [
-    {
-      "userName": "Golam Hossain",
-      "msgBody": "sss",
-      "id": 1
-    },
-    {
-      "userName": "Golam Hossain",
-      "msgBody": "msg",
-      "id": 2
-    }
+    
   ]
 }

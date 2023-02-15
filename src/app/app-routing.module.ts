@@ -13,7 +13,7 @@ import { MostrecentComponent } from './myCom/mostrecent/mostrecent.component';
 import { NotificationComponent } from './myCom/notification/notification.component';
 import { PagesComponent } from './myCom/pages/pages.component';
 import { ProfileComponent } from './myCom/profile/profile.component';
-import { RegisterComponent } from './myCom/register/register.component';
+import { RegisterComponent } from './myCom/signup/signup.component';
 import { SavedComponent } from './myCom/saved/saved.component';
 import { TimelineComponent } from './myCom/timeline/timeline.component';
 import { WatchComponent } from './myCom/watch/watch.component';

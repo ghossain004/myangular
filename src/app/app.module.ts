@@ -9,7 +9,7 @@ import { TimelineComponent } from './myCom/timeline/timeline.component';
 import { ProfileComponent } from './myCom/profile/profile.component';
 import { HeaderComponent } from './myCom/header/header.component';
 import { FooterComponent } from './myCom/footer/footer.component';
-import { RegisterComponent } from './myCom/register/register.component';
+import { RegisterComponent } from './myCom/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FriendsComponent } from './myCom/friends/friends.component';

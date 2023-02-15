@@ -5,8 +5,8 @@ import { SignupService } from 'src/app/service/signup.service';
 
 @Component({
   selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css']
 })
 export class RegisterComponent implements OnInit{
   form!: FormGroup;
@@ -23,6 +23,7 @@ export class RegisterComponent implements OnInit{
       email: new FormControl('', [Validators.required]),
       password: new FormControl('', [Validators.required]),
       dob: new FormControl('', [Validators.required]),
+      gender: new FormControl('', [Validators.required]),
       // male: new FormControl('', [Validators.required]),
       // female: new FormControl('', [Validators.required]),
       // custom: new FormControl('', [Validators.required]),

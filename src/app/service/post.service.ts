@@ -8,7 +8,8 @@ import { Post } from "../model/post.model";
 })
 
 export class PostService {
-    private apiURL = "http://localhost:3000";
+    // private apiURL = "http://localhost:3000";
+    private apiURL = "http://localhost:8080/api";
 
     httpOptions = {
         headers: new HttpHeaders({

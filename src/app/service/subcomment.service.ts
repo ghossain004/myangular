@@ -8,7 +8,8 @@ import { SubComment } from "../model/subcomment.model";
 })
 
 export class SubCommentService {
-    private apiURL = "http://localhost:3000";
+    // private apiURL = "http://localhost:3000";
+    private apiURL = "http://localhost:8080/api";
 
     httpOptions = {
         headers: new HttpHeaders({
@@ -20,7 +21,7 @@ export class SubCommentService {
 
     getAll(): Observable<any> {
   
-        return this.httpClient.get(this.apiURL + '/subcomment')
+        return this.httpClient.get(this.apiURL + '/posts')
       
         .pipe(
           catchError(this.errorHandler)
@@ -29,7 +30,7 @@ export class SubCommentService {
 
       create(subComment:SubComment): Observable<any> {
   
-        return this.httpClient.post(this.apiURL + '/subcomment', JSON.stringify(subComment), this.httpOptions)
+        return this.httpClient.post(this.apiURL + '/posts', JSON.stringify(subComment), this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)
@@ -38,7 +39,7 @@ export class SubCommentService {
 
       find(id:number): Observable<any> {
   
-        return this.httpClient.get(this.apiURL + '/subcomment/' + id)
+        return this.httpClient.get(this.apiURL + '/posts/' + id)
       
         .pipe(
           catchError(this.errorHandler)
@@ -47,7 +48,7 @@ export class SubCommentService {
 
       update(id:number, subComment:SubComment): Observable<any> {
   
-        return this.httpClient.put(this.apiURL + '/subcomment/' + id, JSON.stringify(subComment), this.httpOptions)
+        return this.httpClient.put(this.apiURL + '/posts/' + id, JSON.stringify(subComment), this.httpOptions)
      
         .pipe( 
           catchError(this.errorHandler)
@@ -55,7 +56,7 @@ export class SubCommentService {
       }
 
       delete(id:number){
-        return this.httpClient.delete(this.apiURL + '/subcomment/' + id, this.httpOptions)
+        return this.httpClient.delete(this.apiURL + '/posts/' + id, this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)

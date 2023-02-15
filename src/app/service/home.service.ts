@@ -8,7 +8,8 @@ import { Signup } from "../model/signup.model";
 })
 
 export class HomeService {
-    private apiURL = "http://localhost:3000";
+    // private apiURL = "http://localhost:3000";
+    private apiURL = "http://localhost:8080/api";
 
     httpOptions = {
         headers: new HttpHeaders({
