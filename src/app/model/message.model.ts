@@ -1,5 +1,9 @@
 export interface Message {
-    id :number;
-    userName :string;
-    msgBody :string;
+    messageId :number;
+    userId :number;
+    messageBody :string;
+    firstName :string;
+    lastName :string;
+    createDate: string;
+    createTime: string;
 }

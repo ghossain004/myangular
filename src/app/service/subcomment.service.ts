@@ -21,7 +21,7 @@ export class SubCommentService {
 
     getAll(): Observable<any> {
   
-        return this.httpClient.get(this.apiURL + '/posts')
+        return this.httpClient.get(this.apiURL + '/comment')
       
         .pipe(
           catchError(this.errorHandler)
@@ -30,7 +30,7 @@ export class SubCommentService {
 
       create(subComment:SubComment): Observable<any> {
   
-        return this.httpClient.post(this.apiURL + '/posts', JSON.stringify(subComment), this.httpOptions)
+        return this.httpClient.post(this.apiURL + '/comment', JSON.stringify(subComment), this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)
@@ -39,7 +39,7 @@ export class SubCommentService {
 
       find(id:number): Observable<any> {
   
-        return this.httpClient.get(this.apiURL + '/posts/' + id)
+        return this.httpClient.get(this.apiURL + '/comment/' + id)
       
         .pipe(
           catchError(this.errorHandler)
@@ -48,7 +48,7 @@ export class SubCommentService {
 
       update(id:number, subComment:SubComment): Observable<any> {
   
-        return this.httpClient.put(this.apiURL + '/posts/' + id, JSON.stringify(subComment), this.httpOptions)
+        return this.httpClient.put(this.apiURL + '/comment/' + id, JSON.stringify(subComment), this.httpOptions)
      
         .pipe( 
           catchError(this.errorHandler)
@@ -56,7 +56,7 @@ export class SubCommentService {
       }
 
       delete(id:number){
-        return this.httpClient.delete(this.apiURL + '/posts/' + id, this.httpOptions)
+        return this.httpClient.delete(this.apiURL + '/comment/' + id, this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)

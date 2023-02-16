@@ -22,7 +22,7 @@ export class CommentService {
 
     getAll(): Observable<any> {
   
-        return this.httpClient.get(this.apiURL + '/posts')
+        return this.httpClient.get(this.apiURL + '/comments')
       
         .pipe(
           catchError(this.errorHandler)
@@ -31,7 +31,7 @@ export class CommentService {
 
       create(comment:Comment): Observable<any> {
   
-        return this.httpClient.post(this.apiURL + '/posts', JSON.stringify(comment), this.httpOptions)
+        return this.httpClient.post(this.apiURL + '/comments', JSON.stringify(comment), this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)
@@ -40,7 +40,7 @@ export class CommentService {
 
       find(id:number): Observable<any> {
   
-        return this.httpClient.get(this.apiURL + '/posts/' + id)
+        return this.httpClient.get(this.apiURL + '/comments/' + id)
       
         .pipe(
           catchError(this.errorHandler)
@@ -49,7 +49,7 @@ export class CommentService {
 
       update(id:number, comment:Comment): Observable<any> {
   
-        return this.httpClient.put(this.apiURL + '/posts/' + id, JSON.stringify(comment), this.httpOptions)
+        return this.httpClient.put(this.apiURL + '/comments/' + id, JSON.stringify(comment), this.httpOptions)
      
         .pipe( 
           catchError(this.errorHandler)
@@ -57,7 +57,7 @@ export class CommentService {
       }
 
       delete(id:number){
-        return this.httpClient.delete(this.apiURL + '/posts/' + id, this.httpOptions)
+        return this.httpClient.delete(this.apiURL + '/comments/' + id, this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)

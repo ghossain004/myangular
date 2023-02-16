@@ -51,7 +51,7 @@
                     <form [formGroup]="homeForm" (ngSubmit)="postSubmit()">
                         <div  style="border: 1px solid; border-radius: 5px; padding: 12px; background-color: white;">
                             <div>
-                                <input id="id" type="text" hidden formControlName="userName"/>
+                                <input id="id" type="text" hidden formControlName="postId"/>
                                 <textarea name="" id="" cols="" rows="" placeholder="what's on your mind?" formControlName="postBody" style="font-size: 17px; padding: 14px 16px; width: 100%; border-radius: 10px;"></textarea>
                             </div>
                             <hr>
@@ -69,21 +69,21 @@
                         <br>
                         <div *ngFor="let post of posts">
                             <div style="border: 1px solid; border-radius: 5px; padding: 12px; background-color: white;">
-                                <a href="" style="text-decoration: none;">{{post.userName}}</a>
-                                <a routerLink="../home" (click)="deletePost(post.id)" style="margin-left: 650px;">Delete</a>
+                                <a href="" style="text-decoration: none;">{{userName}}&nbsp;{{post.userName}}</a>  {{post.createDate}} {{post.createTime}}
+                                <a routerLink="../home" (click)="deletePost(post.postId)" style="margin-left: 650px;">Delete</a>
                                 <p>
                                     {{post.postBody}}
                                 </p>
                                 <hr>
                                 <div>
-                                    <input type="button" [ngStyle]="{'background-color': btnColor}" (click)="btnClorChamge(post.id)" value="Like" style="margin-right: 10px;">
+                                    <input type="button" [ngStyle]="{'background-color': btnColor}" (click)="btnClorChamge(post.postId)" value="Like" style="margin-right: 10px;">
                                     <input  type="button" value="Comment" style="margin-right: 10px;">
                                     <input type="button" value="Share"><br><br>
 
                                     <div>
                                         <form [formGroup]="commentForm" (ngSubmit)="commentSubmit()">
                                             <div>
-                                                <input id="id" type="text" hidden formControlName="userName"/>
+                                                <input id="id" type="text" hidden formControlName="commentId"/>
                                                 <textarea name="" id="" cols="5" rows="1" placeholder="write a comment" formControlName="commentBody" style="font-size: 17px; padding: 14px 16px; width: 70%; border-radius: 10px;"></textarea><br>
                                                 <button class="btn btn-primary" style="margin-right: 100px;">Comment</button>
                                             </div>
@@ -93,19 +93,19 @@
                                                 <div class="col-md-1"></div>
                                                 <div class="col-md-11" *ngFor="let comment of comments">
                                                     <br><hr>
-                                                    <a href="" style="text-decoration: none;">{{comment.userName}}</a>
+                                                    <a href="" style="text-decoration: none;">{{comment.userName}}</a> {{comment.createDate}} {{comment.createTime}}
                                                     
                                                     <p>
                                                     {{comment.commentBody}}
                                                     </p>
                                                     <hr>
-                                                    <input type="button" [ngStyle]="{'background-color': btnColor}" (click)="btnClorChamge(post.id)" value="Like" style="margin-right: 10px;">
+                                                    <input type="button" [ngStyle]="{'background-color': btnColor2}" (click)="cmntLike(comment.commentId)" value="Like" style="margin-right: 10px;">
                                                     <input  type="button" value="Replay" style="margin-right: 10px;"><br><br>
     
                                                     <form [formGroup]="subcommentForm" (ngSubmit)="replaySubmit()">
                                                         <div>
-                                                            <input id="id" type="text" hidden formControlName="userName"/>
-                                                            <textarea name="" id="" cols="5" rows="1" placeholder="write a comment" formControlName="subCommentBody" style="font-size: 17px; padding: 14px 16px; width: 70%; border-radius: 10px;"></textarea><br>
+                                                            <input id="id" type="text" hidden formControlName="subCommentId"/>
+                                                            <textarea name="" id="" cols="5" rows="1" placeholder="write a comment" formControlName="commentBody" style="font-size: 17px; padding: 14px 16px; width: 70%; border-radius: 10px;"></textarea><br>
                                                             <button class="btn btn-primary" style="margin-right: 100px;">Replay</button>
                                                         </div>
                                                     </form>
@@ -114,12 +114,12 @@
                                                         <div class="col-md-1"></div>
                                                         <div class="col-md-11" *ngFor="let subcmnt of subComment">
                                                             <br><hr>
-                                                            <a href="" style="text-decoration: none;">{{subcmnt.userName}}</a>
+                                                            <a href="" style="text-decoration: none;">{{subcmnt.userName}}</a>  {{subcmnt.createDate}}  {{subcmnt.createTime}}
                                                         <p>
-                                                        {{subcmnt.subCommentBody}}
+                                                        {{subcmnt.commentBody}}
                                                         </p>
                                                         <hr>
-                                                        <input type="button" [ngStyle]="{'background-color': btnColor}" (click)="btnClorChamge(post.id)" value="Like" style="margin-right: 10px;">
+                                                        <input type="button" [ngStyle]="{'background-color': btnColor3}" (click)="subCmntLike(subcmnt.subCommentId)" value="Like" style="margin-right: 10px;">
                                                         </div>
                                                     </div>
                                                 </div>

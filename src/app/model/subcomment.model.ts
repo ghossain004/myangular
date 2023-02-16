@@ -1,5 +1,10 @@
 export interface SubComment {
-    id :number;
+    subCommentId :number;
+    userId :number;
+    commentId :number;
+    postId :number;
     userName :string;
-    subCommentBody :string;
+    commentBody :string;
+    createDate: string;
+    createTime: string;
 }

@@ -41,7 +41,7 @@ export class MessageComponent implements OnInit{
 
  this.messageForm = new FormGroup({
   userName: new FormControl('', [Validators.required]),
-  msgBody: new FormControl('', Validators.required),
+  messageBody: new FormControl('', Validators.required),
 })
   }
 

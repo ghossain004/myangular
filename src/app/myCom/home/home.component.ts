@@ -55,18 +55,19 @@ this.subCommentService.getAll().subscribe((res:any) => {
 })
 
     this.homeForm = new FormGroup({
-      userName: new FormControl('', [Validators.required]),
+      postId: new FormControl('', Validators.required),
       postBody: new FormControl('', Validators.required),
+      userName: new FormControl('', Validators.required)
     })
 
     this.commentForm = new FormGroup({
-      userName: new FormControl('', [Validators.required]),
-      commentBody: new FormControl('', Validators.required),
+      commentId: new FormControl('', [Validators.required]),
+      commentBody: new FormControl('', Validators.required)
     })
 
     this.subcommentForm = new FormGroup({
-      userName: new FormControl('', [Validators.required]),
-      subCommentBody: new FormControl('', Validators.required),
+      subCommentId: new FormControl('', [Validators.required]),
+      commentBody: new FormControl('', Validators.required)
     })
   }
 
@@ -75,6 +76,8 @@ this.subCommentService.getAll().subscribe((res:any) => {
   }
 
   btnColor:string = ''
+  btnColor2:string = ''
+  btnColor3:string = ''
 
   btnClorChamge(id:number){
     if(this.btnColor===''){
@@ -84,6 +87,23 @@ this.subCommentService.getAll().subscribe((res:any) => {
     }
   }
 
+  cmntLike(id:number){
+    if(this.btnColor2===''){
+      this.btnColor2='#033dfc';
+    }else{
+      this.btnColor2=''
+    }
+  }
+
+  subCmntLike(id:number){
+    if(this.btnColor3===''){
+      this.btnColor3='#ba03fc';
+    }else{
+      this.btnColor3=''
+    }
+  }
+
+  userName:string = 'Golam Hossain'
   postSubmit(){
     console.log(this.homeForm.value);
     this.homeForm.value.userName = "Golam Hossain"
@@ -96,7 +116,7 @@ this.subCommentService.getAll().subscribe((res:any) => {
 
   deletePost(id:number){
     this.postService.delete(id).subscribe(res => {
-         this.posts = this.posts.filter(item => item.id !== id);
+         this.posts = this.posts.filter(item => item.postId !== id);
          console.log('Post deleted successfully!');
     })
   }
@@ -123,7 +143,7 @@ this.subCommentService.getAll().subscribe((res:any) => {
 
   deleteComment(id:number){
     this.commentService.delete(id).subscribe(res => {
-         this.comments = this.comments.filter(item => item.id !== id);
+         this.comments = this.comments.filter(item => item.commentId !== id);
          console.log('Post deleted successfully!');
     })
   }

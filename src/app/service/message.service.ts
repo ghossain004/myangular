@@ -21,7 +21,7 @@ export class MessageService {
 
     getAll(): Observable<any> {
   
-        return this.httpClient.get(this.apiURL + '/posts')
+        return this.httpClient.get(this.apiURL + '/messages')
       
         .pipe(
           catchError(this.errorHandler)
@@ -30,7 +30,7 @@ export class MessageService {
 
       create(post:Message): Observable<any> {
   
-        return this.httpClient.post(this.apiURL + '/posts', JSON.stringify(post), this.httpOptions)
+        return this.httpClient.post(this.apiURL + '/messages', JSON.stringify(post), this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)
@@ -39,7 +39,7 @@ export class MessageService {
 
       find(id:number): Observable<any> {
   
-        return this.httpClient.get(this.apiURL + '/posts/' + id)
+        return this.httpClient.get(this.apiURL + '/messages/' + id)
       
         .pipe(
           catchError(this.errorHandler)
@@ -48,7 +48,7 @@ export class MessageService {
 
       update(id:number, post:Message): Observable<any> {
   
-        return this.httpClient.put(this.apiURL + '/posts/' + id, JSON.stringify(post), this.httpOptions)
+        return this.httpClient.put(this.apiURL + '/messages/' + id, JSON.stringify(post), this.httpOptions)
      
         .pipe( 
           catchError(this.errorHandler)
@@ -56,7 +56,7 @@ export class MessageService {
       }
 
       delete(id:number){
-        return this.httpClient.delete(this.apiURL + '/posts/' + id, this.httpOptions)
+        return this.httpClient.delete(this.apiURL + '/messages/' + id, this.httpOptions)
       
         .pipe(
           catchError(this.errorHandler)
