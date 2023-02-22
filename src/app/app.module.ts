@@ -25,6 +25,7 @@ import { MessageComponent } from './myCom/message/message.component';
 import { NotificationComponent } from './myCom/notification/notification.component';
 import { GroupsComponent } from './myCom/groups/groups.component';
 import { PostComponent } from './myCom/post/post.component';
+import { SearchComponent } from './myCom/search/search.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { PostComponent } from './myCom/post/post.component';
     MessageComponent,
     NotificationComponent,
     GroupsComponent,
-    PostComponent
+    PostComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

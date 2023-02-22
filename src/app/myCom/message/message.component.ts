@@ -28,7 +28,7 @@ export class MessageComponent implements OnInit{
     this.messageService.getAll().subscribe((res:any) => {
       this.messages = res;
 
-      console.log('Posts get successfully!', this.messages);
+      console.log('Messages get successfully!', this.messages);
 
  })
 
@@ -40,7 +40,7 @@ export class MessageComponent implements OnInit{
 })
 
  this.messageForm = new FormGroup({
-  userName: new FormControl('', [Validators.required]),
+  user: new FormControl('', [Validators.required]),
   messageBody: new FormControl('', Validators.required),
 })
   }
@@ -51,7 +51,7 @@ export class MessageComponent implements OnInit{
 
   messageSubmit(){
     console.log(this.messageForm.value);
-    this.messageForm.value.userName = "Golam Hossain"
+    this.messageForm.value.user = {userId:1}
     this.messageService.create(this.messageForm.value).subscribe((res:any) => {
          console.log('Post created successfully!');
          this.router.navigateByUrl('message');
